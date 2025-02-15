@@ -24,8 +24,46 @@
 
     <!-- Objects with Nested Structures -->
      <script>
+        let classinfo = {
+            className:'ENSF381: Full-Stack Web Development',
+            instructor:'Dr. Smith',
+            students:classRoster,
+            details: {
+                semester: 'Winter',
+                year: 2025,
+            }
+        }
+
+        classinfo.schedule = ["Monday", "Wednesday", "Friday"]
+
+        classinfo.instructor = "Dr. Deb"
+
+        console.log(classinfo.className);
+        console.log(classinfo.instructor);
+        console.log(classinfo.students);
+
+        console.log(classinfo.details.semester);
+
+        console.log(classinfo);
         
+
+        let {className: classNameDS, students: studentsDS} = classinfo
+        console.log(classNameDS);
+        console.log(studentsDS);
+
+        let {details: {semester: semesterDS, year: yearDS}} = classinfo;
+        console.log(semesterDS);
+        console.log(yearDS);
+
+        const [student1,student2,...remainingStudents] = studentsDS
+
+        console.log(student1);
+        console.log(student2);
+        console.log(remainingStudents);
+
+
+
      </script>
 </body>
 </head>
-</html>
+</html> 
